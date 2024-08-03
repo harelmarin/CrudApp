@@ -34,18 +34,23 @@
   padding-top: 20px;
   padding-left: 20px;
 }
+
 .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 40px;
   padding: 5px;
   border-radius: 5px;
-  text-align: center;
   background-color: #419b44;
   border: 1px solid #FEFEFE;
   color: #FEFEFE;
   transition: 0.3s;
   opacity: 0.7;
   font-size: 15px;
+  text-decoration: none;
+  font-family: 'Bold';
 }
 
 .add:hover {
@@ -120,6 +125,7 @@ tbody {
   transition: 0.3s;
   opacity: 0.7;
   font-size: 12px;
+  font-family: 'Bold';
 }
 
 .container-edit button:hover {
@@ -144,5 +150,73 @@ tbody {
 }
 
 
+/* CREATE */
+
+
+.container-create {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  background-color: #FEFEFE;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+h2 {
+  font-family: 'Bold';
+  font-size: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.form-group label {
+  font-family: 'Bold';
+  font-size: 15px;
+}
+
+.form-group input {
+  margin-top: 3px;
+  width: 90%;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  font-family: 'Regular';
+  font-size: 15px;
+}
+
+.form-group input:hover {
+  cursor: pointer;
+}
+
+
+.container-create button {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3162f7;
+  border: 1px solid #FEFEFE;
+  color: #FEFEFE;
+  transition: 0.3s;
+  opacity: 0.7;
+  font-size: 15px;
+  font-family: 'Bold';
+  margin-bottom: 20px;
+}
+
+.container-create button:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 

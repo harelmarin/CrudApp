@@ -4,6 +4,7 @@ const mysql = require('mysql');
 
 const app = express();
 
+app.use(express.json());
 app.use(cors());
 
 const db = mysql.createConnection({
@@ -21,6 +22,16 @@ app.get('/', (req, res) => {
         return result;
     });
     });
+
+    
+app.post('/create', (req, res) => {
+    const sql = 'INSERT INTO student (`name`, `mail`) VALUES (?, ?)';
+    const values = [req.body.name, req.body.mail];
+    db.query(sql, values, (err, result) => {
+        if (err) res.json({ message: 'An error occurred' });
+        res.json({ message: 'Student added successfully' });
+    });
+});
 
 app.listen(8001, () => {
   console.log('Server is running on port 8001');

@@ -1,5 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 
 function Student() {
@@ -20,7 +22,7 @@ function Student() {
   return (
     <div className='container-global'>
       <div className='container'>
-      <button className='add'> Add </button>
+      <Link to='/create' className='add'> Add </Link>
       <table className='table'>
         <thead>
           <div className='container-head'>
