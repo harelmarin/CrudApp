@@ -23,21 +23,27 @@ function Student() {
       <button className='add'> Add </button>
       <table className='table'>
         <thead>
+          <div className='container-head'>
           <tr>
             <th>Name</th>
             <th>Mail</th>
           </tr>
+          </div>
         </thead>
         <tbody>
           {
           student.map((data, i) => (
             <tr className='container-ligne'key={i}>
-              <td>{data.Name}</td>
-              <td>{data.Mail}</td>
+              <div className='container-data'>
+             <div className='cellule'> <td>{data.Name}</td> </div>
+             <div className='cellule'><td>{data.Mail}</td> </div>
+              </div>
+            
               <td className='container-edit'>
                 <button className='edit'> Edit </button>
                 <button className='delete'> Delete </button>
               </td>
+    
             </tr>
           ))
           }
