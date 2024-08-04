@@ -2,7 +2,14 @@ import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-
+const handleDelete = async (id) => {
+  try {
+    await axios.delete(`http://localhost:8001/student/${id}`);
+    window.location.reload();
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 function Student() {
 
@@ -42,8 +49,8 @@ function Student() {
               </div>
             
               <td className='container-edit'>
-                <button className='edit'> Edit </button>
-                <button className='delete'> Delete </button>
+                <Link to={`update/${data.ID}`}className='edit'> Edit </Link>
+                <button className='delete' onClick={e => handleDelete(data.ID)}> Delete </button>
               </td>
     
             </tr>
