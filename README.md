@@ -33,7 +33,7 @@ A simple CRUD application built with React for the frontend and Node.js with Exp
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/harelmarin/CrudApp
+   git clone https://github.com/harelmarin/CrudApp.git
    cd /backend
    npm install 
    ```
